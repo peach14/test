@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isAnimating = false
+    @State private var isAnimating = true
     var body: some View {
         VStack(alignment: .trailing,content: {
           
             GeometryReader{
                 geometry in
                 VStack{
-                    Image(systemName: "car.side.fill").resizable().frame(width: 70,height: 70)
+                    Image(systemName: "car.side.fill").resizable().frame(width: 70,height: 70).foregroundStyle(.red)
                         .offset(x: isAnimating ? geometry.size.width
                                 - geometry.size.width / 5.3
                                 : 3)
